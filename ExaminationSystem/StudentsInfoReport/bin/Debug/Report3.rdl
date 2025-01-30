@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource1">
       <DataSourceReference>DataSource1</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>0a89d32d-018b-4bd3-aaff-f423adf9f4b1</rd:DataSourceID>
+      <rd:DataSourceID>d930098a-3741-436f-a900-0c9370a18e49</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -23,9 +23,13 @@
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
-        <Field Name="message">
-          <DataField>message</DataField>
+        <Field Name="crs_title">
+          <DataField>crs_title</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Student_number">
+          <DataField>Student number</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -54,6 +58,7 @@
             </Paragraphs>
             <rd:DefaultName>textbox1</rd:DefaultName>
             <Height>0.42in</Height>
+            <Width>5in</Width>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -64,6 +69,9 @@
           <Tablix Name="table1">
             <TablixBody>
               <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
                 </TablixColumn>
@@ -81,7 +89,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>message</Value>
+                                  <Value>crs title</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontSize>11pt</FontSize>
@@ -90,12 +98,53 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox2</rd:DefaultName>
-                          <Height>0.22in</Height>
-                          <Width>1in</Width>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <FontFamily />
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Student number</Value>
+                                  <Style>
+                                    <FontFamily />
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#666666</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -119,26 +168,26 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="message">
+                        <Textbox Name="crs_title">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!message.Value</Value>
+                                  <Value>=Fields!crs_title.Value</Value>
                                   <Style>
                                     <FontFamily />
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>message</rd:DefaultName>
-                          <Height>0.21in</Height>
-                          <Width>1in</Width>
+                          <rd:DefaultName>crs_title</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -153,6 +202,46 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Student_number">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Student_number.Value</Value>
+                                  <Style>
+                                    <FontFamily />
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Student_number</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <FontFamily />
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -161,6 +250,7 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
+                <TablixMember />
                 <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
@@ -186,6 +276,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.42in</Top>
+            <Height>0.43in</Height>
+            <Width>2in</Width>
+            <ZIndex>1</ZIndex>
             <Style />
           </Tablix>
         </ReportItems>
@@ -223,6 +316,6 @@
   </ReportParametersLayout>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Invalid</rd:ReportUnitType>
-  <rd:ReportID>028ba79a-d895-4897-9d32-b42444f806b9</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>34e632d0-3b3d-44dc-83a0-897d85b9f6da</rd:ReportID>
 </Report>
