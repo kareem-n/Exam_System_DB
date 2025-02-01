@@ -4,10 +4,9 @@
 
 The **Examination System Database** is designed to manage various aspects of an examination system, including courses, exams, students, instructors, and departments. It supports logging user answers, managing course details, tracking exam performance, and linking students to courses.
 
-
+![ERD (3)](https://github.com/user-attachments/assets/a936b698-b7d3-4a3a-b99b-cc21f891f8e2)
 
 ---
-
 
 ## Key Tables
 
