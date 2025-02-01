@@ -120,6 +120,38 @@ Stores topics covered in courses:
 
 ---
 
+
+## Stored Procedures
+
+Each table is associated with four stored procedures to manage data:
+
+- **Insert**: Inserts new records into the table.
+- **Update**: Modifies existing records.
+- **Delete**: Removes records.
+- **Select**: Retrieves records based on specific conditions.
+
+### Examples of Stored Procedures
+
+#### Insert Stored Procedure
+Each table has an `Insert` stored procedure that adds new data to the table. For example:
+- **Course Insert**: Inserts course details such as title, description, and duration.
+- **Instructor Insert**: Inserts instructor details like name, salary, and department.
+
+#### Update Stored Procedure
+The `Update` stored procedures allow you to modify existing records. For instance:
+- **Course Update**: Updates course details such as title and description.
+- **Instructor Update**: Modifies instructor information such as salary and department.
+
+#### Delete Stored Procedure
+The `Delete` stored procedures are used to remove data from the tables. For example:
+- **Course Delete**: Deletes a specific course by ID.
+- **Instructor Delete**: Deletes a specific instructor by ID.
+
+#### Select Stored Procedure
+The `Select` stored procedures retrieve data based on certain conditions. For example:
+- **Course Select**: Retrieves course details by course ID.
+- **Instructor Select**: Retrieves instructor details by instructor ID.
+
 ## Usage
 
 This system is designed for managing academic exams and courses. It provides functionality for:
